@@ -17,6 +17,9 @@ To solve the lab, perform an SQL injection UNION attack that retrieves all usern
 ![image](https://user-images.githubusercontent.com/70814577/112761113-3fd21900-9002-11eb-8857-1171f255cd3b.png)
 ![image](https://user-images.githubusercontent.com/70814577/112761157-86277800-9002-11eb-8361-3dd98e5f4173.png)
 ![image](https://user-images.githubusercontent.com/70814577/112761172-9fc8bf80-9002-11eb-9846-d65932de12fb.png)
+![image](https://user-images.githubusercontent.com/70814577/112761428-f682c900-9003-11eb-9563-9667fc01d5ba.png)
+![image](https://user-images.githubusercontent.com/70814577/112761438-04d0e500-9004-11eb-9b9c-0f5440a7b8ed.png)
+
 
 Sorgudan elde edilen sonuçlar uygulamanın yanıtında döndürülür, böylece diğer tablolardan veri almak için bir UNION saldırısı kullanabilirsiniz.
 Veritabanı, kullanıcı adı ve parola adı verilen sütunlarla birlikte kullanıcılar adında farklı bir tablo içerir.
