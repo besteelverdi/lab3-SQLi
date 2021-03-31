@@ -1,4 +1,4 @@
-# Lab: SQL injection UNION attack, retrieving data from other tables
+# Lab3: SQL injection UNION attack, retrieving data from other tables
 Bu yazıda, PortSwingger tarafından oluşturulan SQLi lablarının üçüncüsünü inceleyeceğiz.
 
 Lab yönergesi:
@@ -24,11 +24,11 @@ Sırasıyla aşağıdaki adımları uyguluyoruz:
 ![image](https://user-images.githubusercontent.com/70814577/112760936-6f345600-9001-11eb-9f54-c8ce5b0721fd.png)
 ![image](https://user-images.githubusercontent.com/70814577/112760949-81ae8f80-9001-11eb-83b0-6b3d171e75fe.png)
 
-- Gerçek sütun sayısını öğrendikten sonra, bu sütunların veri türlerini kontrol edeceğiz. 'UNION SELECT' abc ',' xyz '- sorgusuyla 2 optik dize döndürür ve tb bize her iki sütunun da veri türü dizeye sahip olduğunu söyler.
+- Gerçek sütun sayısını öğrendikten sonra, bu sütunların veri türlerini kontrol edeceğiz. 'UNION SELECT' abc ',' xyz '- sorgusuyla iki sütünda da string döndürür ve bize her iki sütunun da veri türünün string olduğunu söyler.
 ![image](https://user-images.githubusercontent.com/70814577/112760978-9d199a80-9001-11eb-9dbb-6f8a3cd872f3.png)
 ![image](https://user-images.githubusercontent.com/70814577/112760998-b3275b00-9001-11eb-8bf1-11a57e058f51.png)
 
-Bildiğimiz gibi, kullanıcı adı ve parola da dize türleridir, bu nedenle kullanıcılar tablosundaki kullanıcı adı ve parolayı almak için ekran görüntüsündeki gibi ' UNION SELECT username, password FROM users-- satırını kullanıyoruz.
+Bildiğimiz gibi, kullanıcı adı ve parola da string türleridir, bu nedenle kullanıcılar tablosundaki kullanıcı adı ve parolayı almak için ekran görüntüsündeki gibi ' UNION SELECT username, password FROM users-- satırını kullanıyoruz.
 ![image](https://user-images.githubusercontent.com/70814577/112761053-f71a6000-9001-11eb-8386-85f301a3fa76.png)
 Sorgunun sonucu olarak sadece yöneticinin şifresini değil, aynı zamanda kullanıcılar tablosunda saklanan tüm kullanıcı adını da aldık. Son olarak, laboratuvarı tamamlamak için giriş yapın ve yöneticinin kullanıcı adını ve şifresini kullanın.
 ![image](https://user-images.githubusercontent.com/70814577/112761113-3fd21900-9002-11eb-8857-1171f255cd3b.png)
